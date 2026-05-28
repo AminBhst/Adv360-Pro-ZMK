@@ -21,6 +21,24 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        paranthesis_combo {
+            bindings = <&paranthesis>;
+            key-positions = <46 59 11>;
+        };
+    };
+
+    macros {
+        paranthesis: paranthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+            label = "PARANTHESIS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
