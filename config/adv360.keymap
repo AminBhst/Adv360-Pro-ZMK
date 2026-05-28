@@ -24,14 +24,9 @@
     combos {
         compatible = "zmk,combos";
 
-        paranthesis_combo {
-            bindings = <&paranthesis>;
-            key-positions = <46 59 11>;
-        };
-
         vim {
             bindings = <&tog 4>;
-            key-positions = <59 70>;
+            key-positions = <59 46>;
         };
     };
 
@@ -93,11 +88,21 @@
 
         vim {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans               &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&to 0   &trans  &trans               &trans  &trans  &trans              &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans               &trans  &tog 5  &kp LC(LEFT_ARROW)                  &trans      &trans                  &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans               &trans  &trans                      &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans        &trans           &trans  &trans
+            >;
+        };
+
+        vim-visual {
+            bindings = <
+&trans  &trans  &trans                   &trans  &trans  &trans                  &trans                                      &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&trans  &trans  &kp LS(LC(RIGHT_ARROW))  &trans  &trans  &trans                  &trans                                      &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&to 0   &trans  &trans                   &trans  &trans  &trans                  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &kp LS(RIGHT_ARROW)  &trans  &trans
+&trans  &trans  &trans                   &trans  &tog 5  &kp LS(LC(LEFT_ARROW))                  &trans      &trans                  &trans              &trans              &trans            &trans               &trans  &trans
+&trans  &trans  &trans                   &trans  &trans                          &trans  &trans  &trans      &trans  &trans  &trans                      &trans              &trans            &trans               &trans  &trans
             >;
         };
     };
