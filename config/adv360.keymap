@@ -19,24 +19,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        n9_lp: n9_lp {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N9_LP";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp N9>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        o0_rp: o0_rp {
-            compatible = "zmk,behavior-mod-morph";
-            label = "O0_RP";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp N0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
