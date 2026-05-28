@@ -103,7 +103,7 @@
         vim {
             bindings = <
 &trans  &trans  &trans               &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &kp HOME   &trans
-&trans  &trans  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans              &trans                                      &trans  &kp LC(C)       &trans          &to 0         &vim_o           &kp LC(V)  &trans
+&trans  &trans  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans              &trans                                      &trans  &kp LC(C)       &kp LC(Z)       &to 0         &vim_o           &kp LC(V)  &trans
 &to 0   &vim_A  &trans               &trans  &trans  &trans              &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &trans
 &trans  &trans  &trans               &trans  &tog 5  &kp LC(LEFT_ARROW)                  &trans      &trans                  &trans          &trans          &trans        &trans           &trans     &trans
 &trans  &trans  &trans               &trans  &trans                      &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans        &trans           &trans     &trans
