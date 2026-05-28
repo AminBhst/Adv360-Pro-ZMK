@@ -37,6 +37,20 @@
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "PARANTHESIS";
         };
+
+        vim_o: vim_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp ENTER &to 0>;
+            label = "VIM_O";
+        };
+
+        vim_A: vim_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &to 0>;
+            label = "VIM_A";
+        };
     };
 
     keymap {
@@ -88,11 +102,11 @@
 
         vim {
             bindings = <
-&trans  &trans  &trans               &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&to 0   &trans  &trans               &trans  &trans  &trans              &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans               &trans  &tog 5  &kp LC(LEFT_ARROW)                  &trans      &trans                  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans               &trans  &trans                      &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans               &trans  &trans  &trans              &trans                                      &trans  &trans          &trans          &trans        &trans           &kp HOME   &trans
+&trans  &trans  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans              &trans                                      &trans  &kp LC(C)       &trans          &to 0         &vim_o           &kp LC(V)  &trans
+&to 0   &vim_A  &trans               &trans  &trans  &trans              &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans     &trans
+&trans  &trans  &trans               &trans  &tog 5  &kp LC(LEFT_ARROW)                  &trans      &trans                  &trans          &trans          &trans        &trans           &trans     &trans
+&trans  &trans  &trans               &trans  &trans                      &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans        &trans           &trans     &trans
             >;
         };
 
